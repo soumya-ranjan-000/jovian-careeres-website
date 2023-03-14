@@ -1,4 +1,4 @@
-<div class="p-1 card m-1 d-flex flex-row align-items-center shadow">
+<div class="p-1 card m-1 d-flex flex-column align-items-stretch shadow" style="width: 500px;">
     <div class="card-body">
         <h3 style="color:rgb(79, 79, 79);font-size: 30px;" class="card-title">
             <p>{{job['title']}}</p>
@@ -8,7 +8,7 @@
             <p class="card-text" style="font-size: 20px;"><b>Salary:</b> {{job['salary']}}</p>
             {% endif %}
     </div>
-    <div>
-        <button class="m-3 btn btn-warning shadow-sm">Apply</button>
+    <div class="">
+        <button class="m-3 btn btn-lg btn-primary shadow-sm">Apply</button>
     </div>
 </div>

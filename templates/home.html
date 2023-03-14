@@ -45,7 +45,7 @@
 
 <body class="container justify-items-center">
   <div style="text-align: center">
-    <h1 id="brand_title">🧑‍💻{{company_name}} Careers🤖</h1>
+    <h1 id="brand_title">🧑‍💻{{company_name}} Career Portal🤖</h1>
   </div>
   <div class="main_content m-5">
     <div id="brand_main_image" class="my-3"></div>
@@ -63,9 +63,11 @@
     </div>
     <div class="p-3">
       <h2>Open Positions</h2>
-      {% for job in jobs %}
-      {% include 'jobitem.html' %}
-      {% endfor %}
+      <div class="d-flex flex-row justify-content-evenly flex-wrap">
+        {% for job in jobs %}
+        {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
     </div>
     <div class="p-3 text-center">
       <button class="btn btn-lg btn-dark">Contact Us</button>
