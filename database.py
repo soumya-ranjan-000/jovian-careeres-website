@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine,text
-conn_url="mysql+pymysql://7fb9arhuyr3ttno1ol8z:pscale_pw_ArVLqmSMMbNsat4qzkIcO7xB6AmnUIH8p0QwP3B3d3Z@ap-south.connect.psdb.cloud/joviandb?charset=utf8mb4"
+import os
+conn_url=f"mysql+pymysql://{os.getenv('username')}:{os.getenv('pass')}@ap-south.connect.psdb.cloud/joviandb?charset=utf8mb4"
 ssl_args={
     'ssl_ca': "/etc/ssl/cert.pem"
 }
