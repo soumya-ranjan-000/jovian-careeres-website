@@ -3,80 +3,42 @@
 
 <head>
   <title>Jovian Carrers</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <style>
-    body {
-      background-color: rgb(249, 249, 249);
-
-    }
-
-    #brand_title {
-      font-size: 40px;
-      font-family: cursive;
-      text-align: center;
-      margin-top: 15px;
-      display: inline-block;
-      padding: 10px;
-      position: sticky;
-      color: rgb(55, 19, 19);
-      font-weight: bold;
-    }
-
-    #brand_main_image {
-      height: 200px;
-      background: url("https://images.pexels.com/photos/1632788/pexels-photo-1632788.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-      background-size: cover;
-      opacity: 0.9;
-      border-radius: 5px;
-    }
-
-    .main_content {
-      background-color: rgba(206, 205, 205, 0.644);
-      border-radius: 5px;
-      box-shadow: -1px -1px 10px #41414196;
-    }
-
-    p {
-      font-family: cursive;
-    }
-  </style>
+  {% include 'bootstraplink.html' %}
+  <link rel="stylesheet" href="/static/home.css" />
 </head>
 
-<body class="container justify-items-center">
-  <div style="text-align: center">
-    <h1 id="brand_title">🧑‍💻{{company_name}} Career Portal🤖</h1>
-  </div>
-  <div class="main_content m-5">
-    <div id="brand_main_image" class="my-3"></div>
-    <div class="p-3">
-      <h2>About Jovian</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </div>
-    <div class="p-3">
-      <h2>Open Positions</h2>
-      <div class="d-flex flex-row justify-content-evenly flex-wrap">
-        {% for job in jobs %}
-        {% include 'jobitem.html' %}
-        {% endfor %}
+<body>
+  {% include 'navbar.html' %}
+  <main class="container">
+    <div class="main_content container-fluid">
+      <div class="row align-items-center">
+        <div id="About" class="p-3 col-lg-6 col-md-12">
+          <h2>About This Portal</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div id="brand_main_image" class="col-lg-6 col-md-12">
+          <div id="image"></div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="mt-5 mb-5">
+        <h2 class="text-center">Open Positions</h2>
+        <div class="row justify-content-evenly flex-wrap mt-5 pt-3 pb-3 mb-5">
+          {% for job in jobs %} {% include 'jobitem.html' %} {% endfor %}
+        </div>
       </div>
     </div>
-    <div class="p-3 text-center">
-      <button class="btn btn-lg btn-dark">Contact Us</button>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+  </main>
+  {% include 'footer.html' %}
 </body>
 
 </html>

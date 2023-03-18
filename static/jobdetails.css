@@ -1,0 +1,76 @@
+@import url('/static/fonts.css');
+
+.title{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3rem;
+    font-weight: 200;
+    opacity: 0.9;
+}
+.id{
+    display: flex;
+    margin-top: -20px;
+    font-family: cursive;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.id p{
+    color: rgb(255, 149, 0);
+}
+.id span{
+    color: rgb(38, 38, 38);
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    opacity: 0.9;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+button[name="apply now"]{
+    background-color: rgb(255, 168, 45);
+    width: 20rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+button[name="apply now"]:hover{
+    background-color: rgb(255, 168, 45);
+    color: white;
+    border-width: 2px;
+}
+
+button[name="email job"]{
+    border-color: rgb(255, 168, 45);
+    width: 20rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    color: rgba(0, 0, 0, 0.799);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    border-width: 2px;
+}
+button[name="email job"]:hover{
+    border-color: rgb(255, 168, 45);
+    color: rgba(0, 0, 0, 0.799);
+    border-width: 2px;
+}
+h4{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+ul li{
+    text-align: justify;
+    font-size: 1.2rem;
+}
+footer a{
+        text-decoration: none;
+        color: #050505;
+}
